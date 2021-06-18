@@ -28,5 +28,3 @@ PREDICTION=$(curl -s -d '{
      -X POST http://localhost:$PORT/predict)
 
 echo "Prediction: $PREDICTION"
-
-echo $PREDICTION > ./output_txt_files/docker_out.txt
