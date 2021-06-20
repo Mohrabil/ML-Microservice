@@ -7,8 +7,7 @@
 dockerpath=$DOCKERHUB_USERNAME/ml-microservice
 
 # Run the Docker Hub container with kubernetes
-kubectl run-container ml-microservice \
-    --generator=run-pod/v1 \
+kubectl run ml-microservice \
     --image=$dockerpath \
     --port=80 \
     --labels app=ml-microservice
@@ -17,4 +16,4 @@ kubectl run-container ml-microservice \
 kubectl get pods
 
 # Forward the container port to a host
-kubectl port-forward ml-microservice 8000:80
+kubectl port-forward ml-microservice 8080:80
